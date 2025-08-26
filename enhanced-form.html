@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Section Demo Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header, footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    main {
+      padding: 1em 2em;
+    }
+    section {
+      margin-bottom: 2em;
+      padding: 1em;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 0.5em;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: auto;
+      margin-top: 1em;
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 0.7em 1.5em;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Demo Page</h1>
+  </header>
+
+  <main>
+    <!-- Section with Lists -->
+    <section>
+      <h2>Things I Enjoy</h2>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Reading technology blogs</li>
+        <li>Coding small projects</li>
+        <li>Traveling to new places</li>
+      </ol>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Pizza</li>
+        <li>Coffee</li>
+        <li>Chocolate</li>
+      </ul>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>The standard markup language for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Used to style and layout web pages.</dd>
+        <dt>Python</dt>
+        <dd>A versatile programming language for many applications.</dd>
+      </dl>
+    </section>
+
+    <!-- Section with a Table -->
+    <section>
+      <h2>Sample Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Activity</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Gym Workout</td>
+            <td>7:00 AM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Online Class</td>
+            <td>6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Team Meeting</td>
+            <td>2:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section with Media -->
+    <section>
+      <h2>Media Showcase</h2>
+      <h3>Image</h3>
+      <img src="https://via.placeholder.com/400x200" alt="Placeholder scenic image" width="400">
+
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video</h3>
+      <video controls width="400" poster="https://via.placeholder.com/400x200">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Section with Form -->
+    <section>
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="John Doe">
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="^\+?[0-9]{10,15}$" placeholder="+254712345678">
+        </fieldset>
+
+        <fieldset>
+          <legend>Feedback</legend>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="category">Category:</label>
+          <select id="category" name="category" required>
+            <option value="">-- Please Select --</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label>
+            <input type="checkbox" name="subscribe" value="yes">
+            Subscribe to newsletter
+          </label>
+
+          <label>Preferred Contact Method:</label>
+          <label><input type="radio" name="contact-method" value="email" required>Email</label>
+          <label><input type="radio" name="contact-method" value="phone">Phone</label>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Demo Page</p>
+  </footer>
+</body>
+</html>
